@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const black = Colors.black;
 const offBlack = Color(0xFF202832);
-const blue = Color(0xFF4763F3);
-const offBlue = Color(0xFFBCC7FF);
+const lblue = Color(0xFF60C0EA);
+const offBlue = Color(0xFFD6F0FC);
 const white = Colors.white;
-const deepGrey = Colors.grey;
+const grey = Color(0xFFE5E5E5);

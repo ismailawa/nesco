@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nesco_app/constants/colors.dart';
@@ -13,8 +14,8 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: black,
-      appBar: AppBar(backgroundColor: black, elevation: 0),
+      backgroundColor: white,
+      appBar: AppBar(backgroundColor: white, elevation: 0),
       body: Stack(
         children: [
           PageView.builder(
@@ -22,11 +23,11 @@ class OnboardingScreen extends StatelessWidget {
               onPageChanged: onBoardingController.selectedIdex,
               itemCount: onBoardingController.onBoardingViews.length,
               itemBuilder: (BuildContext context, int index) {
-                return Container(
+                return SizedBox(
                   child: Column(
                     children: [
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.3,
+                        height: MediaQuery.of(context).size.height * 0.27,
                       ),
                       Image.asset(
                         onBoardingController.onBoardingViews[index].imageAsset,
@@ -34,20 +35,19 @@ class OnboardingScreen extends StatelessWidget {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.03,
                       ),
-                      GradientText(
+                      Text(
                         onBoardingController.onBoardingViews[index].title,
                         style: GoogleFonts.roboto(
-                            color: blue,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
-                        colors: [blue, offBlue, blue],
+                            color: lblue,
+                            fontWeight: FontWeight.w800,
+                            fontSize: 32.sp),
                       ),
                     ],
                   ),
                 );
               }),
           Positioned(
-            bottom: MediaQuery.of(context).size.height * 0.2,
+            bottom: MediaQuery.of(context).size.height * 0.13,
             left: MediaQuery.of(context).size.width * 0.4,
             child: Row(
                 children: List.generate(
@@ -61,7 +61,7 @@ class OnboardingScreen extends StatelessWidget {
                                 color:
                                     onBoardingController.selectedIdex.value ==
                                             index
-                                        ? blue
+                                        ? lblue
                                         : white,
                                 shape: BoxShape.circle),
                           ),
@@ -69,9 +69,9 @@ class OnboardingScreen extends StatelessWidget {
           ),
           Positioned(
             right: MediaQuery.of(context).size.width * 0.2,
-            bottom: 40,
+            bottom: 40.h,
             child: CustomButton(
-              text: 'GET STARTED',  
+              text: 'GET STARTED',
               onPressed: () {
                 Get.toNamed('loginPage');
               },

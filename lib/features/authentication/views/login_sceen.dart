@@ -12,11 +12,11 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: black,
+        backgroundColor: white,
         elevation: 0,
         automaticallyImplyLeading: false,
       ),
-      backgroundColor: black,
+      backgroundColor: white,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
         child: Column(
@@ -24,8 +24,8 @@ class LoginScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/images/bolt.png',
-              height: 50,
+              'assets/images/logo.png',
+              height: MediaQuery.of(context).size.height * 0.16,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.06,
@@ -48,7 +48,7 @@ class LoginScreen extends StatelessWidget {
                           height: 45,
                           width: 100,
                           decoration: BoxDecoration(
-                              color: blue,
+                              color: lblue,
                               borderRadius: BorderRadius.circular(20)),
                           child: Center(
                             child: Text(
@@ -62,7 +62,9 @@ class LoginScreen extends StatelessWidget {
                       Expanded(
                           child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: TextFormField(),
+                        child: TextFormField(
+                          decoration: InputDecoration(border: InputBorder.none),
+                        ),
                       ))
                     ],
                   ),
@@ -74,6 +76,7 @@ class LoginScreen extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
             CustomButton(
+                width: MediaQuery.of(context).size.width * 0.7,
                 text: 'Login',
                 onPressed: () {
                   Get.toNamed('bottomNavigation');

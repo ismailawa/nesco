@@ -21,7 +21,7 @@ class BottomNavigationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: black,
+        backgroundColor: white,
         body: Obx(
           () => Center(
             child: screenContents.elementAt(navController.selectedIndex),
@@ -46,9 +46,9 @@ class BottomNavigationScreen extends StatelessWidget {
                   selectedLabelStyle: GoogleFonts.roboto(
                       textStyle:
                           const TextStyle(color: Colors.white, fontSize: 8)),
-                  backgroundColor: offBlack,
-                  selectedItemColor: blue,
-                  unselectedItemColor: white,
+                  backgroundColor: lblue,
+                  selectedItemColor: white,
+                  unselectedItemColor: grey,
                   type: BottomNavigationBarType.fixed,
                   elevation: 10,
                   unselectedFontSize: 10,
@@ -58,9 +58,9 @@ class BottomNavigationScreen extends StatelessWidget {
                           height: MediaQuery.of(context).size.height * 0.036,
                           width: MediaQuery.of(context).size.width * 0.09,
                           decoration: BoxDecoration(
-                              color: deepGrey,
+                              color: grey,
                               borderRadius: BorderRadius.circular(15)),
-                          child: Icon(Icons.home)),
+                          child: const Icon(Icons.home)),
                       label: 'Home',
                     ),
                     BottomNavigationBarItem(
@@ -70,7 +70,7 @@ class BottomNavigationScreen extends StatelessWidget {
                             height: MediaQuery.of(context).size.height * 0.036,
                             width: MediaQuery.of(context).size.width * 0.09,
                             decoration: BoxDecoration(
-                                color: deepGrey,
+                                color: grey,
                                 borderRadius: BorderRadius.circular(15)),
                             child: Icon(Icons.transform_outlined)),
                       ),
@@ -83,7 +83,7 @@ class BottomNavigationScreen extends StatelessWidget {
                             height: MediaQuery.of(context).size.height * 0.036,
                             width: MediaQuery.of(context).size.width * 0.09,
                             decoration: BoxDecoration(
-                                color: deepGrey,
+                                color: grey,
                                 borderRadius: BorderRadius.circular(15)),
                             child: Icon(Icons.notifications)),
                       ),
@@ -97,12 +97,12 @@ class BottomNavigationScreen extends StatelessWidget {
                                   MediaQuery.of(context).size.height * 0.036,
                               width: MediaQuery.of(context).size.width * 0.09,
                               decoration: BoxDecoration(
-                                  color: deepGrey,
+                                  color: grey,
                                   borderRadius: BorderRadius.circular(15)),
                               child: Icon(Icons.person)),
                         ),
                         label: 'Profile',
-                        backgroundColor: blue),
+                        backgroundColor: lblue),
                   ],
                   currentIndex: navController.selectedIndex,
                   onTap: (index) => navController.selectedIndex = index,

@@ -8,15 +8,15 @@ class OnBoardingScreenController extends GetxController {
   var viewController = PageController();
   List<OnBoardingInfomations> onBoardingViews = [
     OnBoardingInfomations(
-      'assets/images/bolt.png',
+      'assets/images/logo.png',
       'NESCO Power\nin your pocket ',
     ),
     OnBoardingInfomations(
-      'assets/images/bolt.png',
+      'assets/images/logo.png',
       "     Buy Power from\nfrom your mobile phone,",
     ),
     OnBoardingInfomations(
-      'assets/images/bolt.png',
+      'assets/images/logo.png',
       "   Customize Light\n at your convinience",
     )
   ];
