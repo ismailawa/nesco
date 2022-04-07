@@ -13,7 +13,7 @@ class OnBoardingScreenController extends GetxController {
     ),
     OnBoardingInfomations(
       'assets/images/logo.png',
-      "     Buy Power from\nfrom your mobile phone,",
+      "     Buy Power from\nfrom your mobile phone",
     ),
     OnBoardingInfomations(
       'assets/images/logo.png',

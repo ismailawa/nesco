@@ -37,7 +37,7 @@ class LoginScreen extends StatelessWidget {
                 Container(
                   width: MediaQuery.of(context).size.width * 0.7,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(25),
                       border: Border.all(color: offBlue),
                       color: offBlue),
                   child: Row(
@@ -49,11 +49,20 @@ class LoginScreen extends StatelessWidget {
                           width: 100,
                           decoration: BoxDecoration(
                               color: lblue,
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: white,
+                                  spreadRadius: 1,
+                                  blurRadius: 2,
+                                  offset: Offset(
+                                      0, 1), // changes position of shadow
+                                ),
+                              ],
                               borderRadius: BorderRadius.circular(20)),
                           child: Center(
                             child: Text(
                               'NESCOID',
-                              style: GoogleFonts.roboto(
+                              style: GoogleFonts.archivo(
                                   color: white, fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -63,7 +72,8 @@ class LoginScreen extends StatelessWidget {
                           child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: TextFormField(
-                          decoration: InputDecoration(border: InputBorder.none),
+                          decoration:
+                              const InputDecoration(border: InputBorder.none),
                         ),
                       ))
                     ],

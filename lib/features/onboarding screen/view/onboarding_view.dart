@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nesco_app/constants/colors.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 import '../../../widgets/custom_button_widget.dart';
 import '../controller/onboarding_controller.dart';
@@ -40,7 +39,7 @@ class OnboardingScreen extends StatelessWidget {
                         style: GoogleFonts.roboto(
                             color: lblue,
                             fontWeight: FontWeight.w800,
-                            fontSize: 32.sp),
+                            fontSize: 25.sp),
                       ),
                     ],
                   ),
@@ -54,7 +53,7 @@ class OnboardingScreen extends StatelessWidget {
                     onBoardingController.onBoardingViews.length,
                     (index) => Obx(
                           () => Container(
-                            margin: EdgeInsets.all(4),
+                            margin: const EdgeInsets.all(4),
                             width: 8,
                             height: 8,
                             decoration: BoxDecoration(
@@ -71,6 +70,7 @@ class OnboardingScreen extends StatelessWidget {
             right: MediaQuery.of(context).size.width * 0.2,
             bottom: 40.h,
             child: CustomButton(
+              width: MediaQuery.of(context).size.width * 0.58,
               text: 'GET STARTED',
               onPressed: () {
                 Get.toNamed('loginPage');

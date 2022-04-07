@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nesco_app/constants/colors.dart';
@@ -32,15 +33,15 @@ class BottomNavigationScreen extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(30),
                     topLeft: Radius.circular(30)),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black38, spreadRadius: 0, blurRadius: 10),
-                ],
+                // boxShadow: [
+                //   BoxShadow(
+                //       color: Colors.black38, spreadRadius: 0, blurRadius: 10),
+                // ],
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30.0),
-                  topRight: Radius.circular(30.0),
+                  topLeft: Radius.circular(10.0.w),
+                  topRight: Radius.circular(10.0.w),
                 ),
                 child: BottomNavigationBar(
                   selectedLabelStyle: GoogleFonts.roboto(
@@ -48,7 +49,7 @@ class BottomNavigationScreen extends StatelessWidget {
                           const TextStyle(color: Colors.white, fontSize: 8)),
                   backgroundColor: lblue,
                   selectedItemColor: white,
-                  unselectedItemColor: grey,
+                  unselectedItemColor: white,
                   type: BottomNavigationBarType.fixed,
                   elevation: 10,
                   unselectedFontSize: 10,
@@ -59,7 +60,7 @@ class BottomNavigationScreen extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 0.09,
                           decoration: BoxDecoration(
                               color: grey,
-                              borderRadius: BorderRadius.circular(15)),
+                              borderRadius: BorderRadius.circular(10)),
                           child: const Icon(Icons.home)),
                       label: 'Home',
                     ),
@@ -71,8 +72,8 @@ class BottomNavigationScreen extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.09,
                             decoration: BoxDecoration(
                                 color: grey,
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Icon(Icons.transform_outlined)),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Icon(Icons.transform_outlined)),
                       ),
                       label: 'Transactions',
                     ),
@@ -84,8 +85,8 @@ class BottomNavigationScreen extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.09,
                             decoration: BoxDecoration(
                                 color: grey,
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Icon(Icons.notifications)),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Icon(Icons.notifications)),
                       ),
                       label: 'Notifications',
                     ),
@@ -98,8 +99,8 @@ class BottomNavigationScreen extends StatelessWidget {
                               width: MediaQuery.of(context).size.width * 0.09,
                               decoration: BoxDecoration(
                                   color: grey,
-                                  borderRadius: BorderRadius.circular(15)),
-                              child: Icon(Icons.person)),
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: const Icon(Icons.person)),
                         ),
                         label: 'Profile',
                         backgroundColor: lblue),
